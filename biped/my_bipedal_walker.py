@@ -1,10 +1,9 @@
 import math
 
-import gymnasium as gym
 from gymnasium import Env, spaces
 import numpy as np
 import pygame
-from Box2D import b2World, b2PolygonShape, b2FixtureDef, b2BodyDef, b2_dynamicBody, b2_staticBody, b2RevoluteJointDef, \
+from Box2D import b2World, b2PolygonShape, b2FixtureDef, b2RevoluteJointDef, \
     b2Vec2
 
 

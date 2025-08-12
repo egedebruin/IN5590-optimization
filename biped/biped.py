@@ -4,7 +4,7 @@ from biped.my_bipedal_walker import MyBipedalWalker
 
 register(
     id="MyBipedalWalker-v0",
-    entry_point="my_bipedal_walker:MyBipedalWalker",
+    entry_point="biped.my_bipedal_walker:MyBipedalWalker",
     max_episode_steps=1000,
 )
 
