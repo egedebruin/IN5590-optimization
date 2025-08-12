@@ -9,7 +9,7 @@
 #SBATCH --array=0-9
 
 # Load environment
-source .venv/bin/activate
+conda activate myenv
 
 # Run the task
 srun --ntasks=1 --cpus-per-task=10 python optimization.py --type="BIPED"

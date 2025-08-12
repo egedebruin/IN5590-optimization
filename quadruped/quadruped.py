@@ -15,7 +15,7 @@ def run(actions, render=False):
     p.setGravity(0, 0, -9.8, physicsClientId=client)
 
     p.loadURDF("plane.urdf", physicsClientId=client)
-    robot = p.loadURDF("../files/generated_quadruped.urdf", [0, 0, 1], physicsClientId=client)
+    robot = p.loadURDF("files/generated_quadruped.urdf", [0, 0, 1], physicsClientId=client)
 
     start_pos, _ = p.getBasePositionAndOrientation(robot, physicsClientId=client)
 

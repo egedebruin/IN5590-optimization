@@ -1,6 +1,6 @@
 from gymnasium.envs.registration import register
 import gymnasium as gym
-from my_bipedal_walker import MyBipedalWalker
+from biped.my_bipedal_walker import MyBipedalWalker
 
 register(
     id="MyBipedalWalker-v0",

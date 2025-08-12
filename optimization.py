@@ -81,7 +81,6 @@ def main():
              for rep, controller, seed in results],
             results_file, indent=4
         )
-    # run_simulation(best_controller, True)
 
 if __name__ == '__main__':
     main()

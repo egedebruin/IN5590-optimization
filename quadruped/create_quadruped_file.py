@@ -119,7 +119,7 @@ def generate_quadruped_urdf(
 
 if __name__ == "__main__":
     generate_quadruped_urdf(
-        filename="../files/generated_quadruped.urdf",
+        filename="files/generated_quadruped.urdf",
         torso_size=(0.6, 0.4, 0.1),
         upper_leg_length=0.2,
         lower_leg_length=0.2,
