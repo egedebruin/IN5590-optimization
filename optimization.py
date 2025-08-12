@@ -1,3 +1,4 @@
+import argparse
 import concurrent.futures
 import json
 import os
@@ -6,13 +7,12 @@ import time
 import numpy as np
 
 from biped import biped
-from quadruped import quadruped
+from quadruped import quadruped, create_quadruped_file
 
 RESTARTS = 10
 MAX_EPISODES = 100
 MAX_WITHOUT_IMPROVEMENT = 50
-TYPE = 'quadruped'
-
+TYPE = 'not_set'
 
 def run_simulation(actions, render=False):
     if TYPE == 'quadruped':
@@ -64,6 +64,16 @@ def run_optimization(repetition):
 
 
 def main():
+    global TYPE
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--type", required=True, help="Your name")
+    args = parser.parse_args()
+    TYPE = args.type
+
+    if TYPE == 'quadruped':
+        create_quadruped_file.generate_quadruped_urdf()
+
     with concurrent.futures.ProcessPoolExecutor(
             max_workers=10
     ) as executor:

@@ -6,10 +6,10 @@
 #SBATCH --cpus-per-task=10
 #SBATCH --time=120:00:00
 #SBATCH --mem-per-cpu=1G
-#SBATCH --array=0-9
 
 # Load environment
+source "/opt/anaconda3/etc/profile.d/conda.sh"
 conda activate myenv
 
 # Run the task
-srun --ntasks=1 --cpus-per-task=10 python optimization.py --type="BIPED"
+srun --ntasks=1 --cpus-per-task=10 python optimization.py --type="biped"
