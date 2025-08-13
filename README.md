@@ -2,11 +2,13 @@
 Tested on ROBIN-HPC, but you can probably use some things here to make it run locally as well.
 
 ### Create conda environment
-We need python3.10 specifically, I did not test it with other version and it might break
+We need python3.10 specifically, I did not test it with other version and it might break.
 ```
-conda create -n myenv python=3.10
-conda activate myenv
+conda create -n <ENV_NAME> python=3.10
+conda activate <ENV_NAME>
 ```
+
+Don't forget to update `./example.sbatch` with the correct <ENV_NAME>.
 
 ### Download code and install requirements
 ```

@@ -9,7 +9,7 @@
 
 # Load environment
 source "/opt/anaconda3/etc/profile.d/conda.sh"
-conda activate myenv
+conda activate <ENV_NAME>
 
 # Run the task
 srun --ntasks=1 --cpus-per-task=10 python optimization.py --type="biped"
